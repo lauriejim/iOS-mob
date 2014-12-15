@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>48908BF4-25C2-4362-8C1B-4111642891C7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ios-mob</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>48C1C7A2813C7C8D4992D34CD747DCF42204DF8E</key>
+		<string>https://github.com/hack1337/iOS-mob.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ios-mob.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>48C1C7A2813C7C8D4992D34CD747DCF42204DF8E</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/hack1337/iOS-mob.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>48C1C7A2813C7C8D4992D34CD747DCF42204DF8E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>48C1C7A2813C7C8D4992D34CD747DCF42204DF8E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iOS-mob</string>
+		</dict>
+	</array>
+</dict>
+</plist>
