@@ -21,9 +21,6 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="16"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="136" y="380" width="114" height="19"/>
-                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="387-3d-mtp">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -48,10 +45,10 @@
                                 <exclude reference="387-3d-mtp"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Mz7-vk-XNC"/>
-                                <exclude reference="sDX-j8-8LU"/>
                                 <exclude reference="0de-xC-cef"/>
                                 <exclude reference="irA-Es-UXY"/>
+                                <exclude reference="Mz7-vk-XNC"/>
+                                <exclude reference="sDX-j8-8LU"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -60,10 +57,10 @@
                                 <include reference="387-3d-mtp"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Mz7-vk-XNC"/>
-                                <include reference="sDX-j8-8LU"/>
                                 <include reference="0de-xC-cef"/>
                                 <include reference="irA-Es-UXY"/>
+                                <include reference="Mz7-vk-XNC"/>
+                                <include reference="sDX-j8-8LU"/>
                             </mask>
                         </variation>
                     </view>
