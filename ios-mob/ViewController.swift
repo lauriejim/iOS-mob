@@ -10,8 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var channelInput: UITextField!
+    @IBOutlet weak var botNameInput: UITextField!
+    @IBOutlet weak var messageInput: UITextField!
+    
     @IBAction func pushButton(sender: AnyObject) {
-        slackRequestController().postMessage("#test", message: "coucou", botName: "Jean Bon")
+        var channel = channelInput.text
+        var botName = botNameInput.text
+        var message = messageInput.text
+        
+        slackRequestController().postMessage(channel, message: message, botName: botName)
         
     }
     @IBAction func listChannels(sender: AnyObject) {
