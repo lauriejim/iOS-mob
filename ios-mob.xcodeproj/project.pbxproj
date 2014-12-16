@@ -13,6 +13,8 @@
 		95AFE2CE1A3ED99F008B12A0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95AFE2CD1A3ED99F008B12A0 /* Images.xcassets */; };
 		95AFE2D11A3ED99F008B12A0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95AFE2CF1A3ED99F008B12A0 /* LaunchScreen.xib */; };
 		95AFE2DD1A3ED99F008B12A0 /* ios_mobTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AFE2DC1A3ED99F008B12A0 /* ios_mobTests.swift */; };
+		95DBA3C71A40606D00105B7D /* slackRequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DBA3C61A40606D00105B7D /* slackRequestController.swift */; };
+		95DFCB371A403B2200C770EE /* slackRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DFCB361A403B2200C770EE /* slackRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		95AFE2D61A3ED99F008B12A0 /* ios-mobTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-mobTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95AFE2DB1A3ED99F008B12A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95AFE2DC1A3ED99F008B12A0 /* ios_mobTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_mobTests.swift; sourceTree = "<group>"; };
+		95DBA3C61A40606D00105B7D /* slackRequestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = slackRequestController.swift; sourceTree = "<group>"; };
+		95DFCB361A403B2200C770EE /* slackRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = slackRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 				95AFE2CD1A3ED99F008B12A0 /* Images.xcassets */,
 				95AFE2CF1A3ED99F008B12A0 /* LaunchScreen.xib */,
 				95AFE2C41A3ED99F008B12A0 /* Supporting Files */,
+				95DFCB361A403B2200C770EE /* slackRequest.swift */,
+				95DBA3C61A40606D00105B7D /* slackRequestController.swift */,
 			);
 			path = "ios-mob";
 			sourceTree = "<group>";
@@ -268,7 +274,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95DFCB371A403B2200C770EE /* slackRequest.swift in Sources */,
 				95AFE2C91A3ED99F008B12A0 /* ViewController.swift in Sources */,
+				95DBA3C71A40606D00105B7D /* slackRequestController.swift in Sources */,
 				95AFE2C71A3ED99F008B12A0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
