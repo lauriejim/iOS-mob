@@ -13,10 +13,46 @@
 		0A1DE5D41A3F250F00A1C67F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A1DE5CE1A3F250F00A1C67F /* LaunchScreen.xib */; };
 		0A1DE5D51A3F250F00A1C67F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1DE5CF1A3F250F00A1C67F /* Main.storyboard */; };
 		0A1DE5D61A3F250F00A1C67F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1DE5D01A3F250F00A1C67F /* ViewController.swift */; };
+		0A1DE63B1A403A9600A1C67F /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1DE63A1A403A9600A1C67F /* CustomCell.swift */; };
+		0A1DE63D1A403DBC00A1C67F /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1DE63C1A403DBC00A1C67F /* Recipe.swift */; };
+		0A1DE6491A406CC000A1C67F /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1DE63F1A406CC000A1C67F /* Lato-Black.ttf */; };
+		0A1DE64A1A406CC000A1C67F /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1DE6401A406CC000A1C67F /* Lato-BlackItalic.ttf */; };
+		0A1DE64B1A406CC000A1C67F /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1DE6411A406CC000A1C67F /* Lato-Bold.ttf */; };
+		0A1DE64C1A406CC000A1C67F /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1DE6421A406CC000A1C67F /* Lato-BoldItalic.ttf */; };
+		0A1DE64D1A406CC000A1C67F /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1DE6431A406CC000A1C67F /* Lato-Hairline.ttf */; };
+		0A1DE64E1A406CC000A1C67F /* Lato-HairlineItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1DE6441A406CC000A1C67F /* Lato-HairlineItalic.ttf */; };
+		0A1DE64F1A406CC000A1C67F /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1DE6451A406CC000A1C67F /* Lato-Italic.ttf */; };
+		0A1DE6501A406CC000A1C67F /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1DE6461A406CC000A1C67F /* Lato-Light.ttf */; };
+		0A1DE6511A406CC000A1C67F /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1DE6471A406CC000A1C67F /* Lato-LightItalic.ttf */; };
+		0A1DE6521A406CC000A1C67F /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1DE6481A406CC000A1C67F /* Lato-Regular.ttf */; };
+		0A1DE6541A40837B00A1C67F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1DE6531A40837B00A1C67F /* DetailViewController.swift */; };
+		0A1DE6561A4099C300A1C67F /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1DE6551A4099C300A1C67F /* AddViewController.swift */; };
+		0A1DE6581A409CD000A1C67F /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1DE6571A409CD000A1C67F /* EditViewController.swift */; };
 		95AFE2DD1A3ED99F008B12A0 /* ios_mobTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AFE2DC1A3ED99F008B12A0 /* ios_mobTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0A3B1B071A41C1CB004B1D42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A3B1B021A41C1CB004B1D42 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
+		0A3B1B091A41C1CB004B1D42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A3B1B021A41C1CB004B1D42 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = AlamofireTests;
+		};
+		0A3B1B0B1A41C1DD004B1D42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A3B1B021A41C1CB004B1D42 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
 		95AFE2D71A3ED99F008B12A0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 95AFE2B91A3ED99F008B12A0 /* Project object */;
@@ -33,6 +69,22 @@
 		0A1DE5CE1A3F250F00A1C67F /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		0A1DE5CF1A3F250F00A1C67F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		0A1DE5D01A3F250F00A1C67F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0A1DE63A1A403A9600A1C67F /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		0A1DE63C1A403DBC00A1C67F /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		0A1DE63F1A406CC000A1C67F /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
+		0A1DE6401A406CC000A1C67F /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
+		0A1DE6411A406CC000A1C67F /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		0A1DE6421A406CC000A1C67F /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
+		0A1DE6431A406CC000A1C67F /* Lato-Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Hairline.ttf"; sourceTree = "<group>"; };
+		0A1DE6441A406CC000A1C67F /* Lato-HairlineItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-HairlineItalic.ttf"; sourceTree = "<group>"; };
+		0A1DE6451A406CC000A1C67F /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
+		0A1DE6461A406CC000A1C67F /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
+		0A1DE6471A406CC000A1C67F /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
+		0A1DE6481A406CC000A1C67F /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		0A1DE6531A40837B00A1C67F /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		0A1DE6551A4099C300A1C67F /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		0A1DE6571A409CD000A1C67F /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		0A3B1B021A41C1CB004B1D42 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = ../../../../../Users/Kevin/.Trash/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		95AFE2C11A3ED99F008B12A0 /* ios-mob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-mob.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95AFE2D61A3ED99F008B12A0 /* ios-mobTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-mobTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95AFE2DB1A3ED99F008B12A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,22 +112,56 @@
 		0A1DE5CA1A3F250F00A1C67F /* ios-mob */ = {
 			isa = PBXGroup;
 			children = (
+				0A1DE63C1A403DBC00A1C67F /* Recipe.swift */,
+				0A1DE63A1A403A9600A1C67F /* CustomCell.swift */,
 				0A1DE5CB1A3F250F00A1C67F /* AppDelegate.swift */,
 				0A1DE5CC1A3F250F00A1C67F /* Images.xcassets */,
 				0A1DE5CD1A3F250F00A1C67F /* Info.plist */,
 				0A1DE5CE1A3F250F00A1C67F /* LaunchScreen.xib */,
 				0A1DE5CF1A3F250F00A1C67F /* Main.storyboard */,
 				0A1DE5D01A3F250F00A1C67F /* ViewController.swift */,
+				0A1DE6531A40837B00A1C67F /* DetailViewController.swift */,
+				0A1DE6551A4099C300A1C67F /* AddViewController.swift */,
+				0A1DE6571A409CD000A1C67F /* EditViewController.swift */,
 			);
 			path = "ios-mob";
+			sourceTree = "<group>";
+		};
+		0A1DE63E1A406CC000A1C67F /* Lato */ = {
+			isa = PBXGroup;
+			children = (
+				0A1DE63F1A406CC000A1C67F /* Lato-Black.ttf */,
+				0A1DE6401A406CC000A1C67F /* Lato-BlackItalic.ttf */,
+				0A1DE6411A406CC000A1C67F /* Lato-Bold.ttf */,
+				0A1DE6421A406CC000A1C67F /* Lato-BoldItalic.ttf */,
+				0A1DE6431A406CC000A1C67F /* Lato-Hairline.ttf */,
+				0A1DE6441A406CC000A1C67F /* Lato-HairlineItalic.ttf */,
+				0A1DE6451A406CC000A1C67F /* Lato-Italic.ttf */,
+				0A1DE6461A406CC000A1C67F /* Lato-Light.ttf */,
+				0A1DE6471A406CC000A1C67F /* Lato-LightItalic.ttf */,
+				0A1DE6481A406CC000A1C67F /* Lato-Regular.ttf */,
+			);
+			name = Lato;
+			path = "../../../../../Users/Kevin/Documents/Hétic/H2/Design/Polices/TOP 50/Lato";
+			sourceTree = "<group>";
+		};
+		0A3B1B031A41C1CB004B1D42 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A3B1B081A41C1CB004B1D42 /* Alamofire.framework */,
+				0A3B1B0A1A41C1CB004B1D42 /* AlamofireTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		95AFE2B81A3ED99F008B12A0 = {
 			isa = PBXGroup;
 			children = (
+				0A1DE63E1A406CC000A1C67F /* Lato */,
 				0A1DE5CA1A3F250F00A1C67F /* ios-mob */,
 				95AFE2D91A3ED99F008B12A0 /* ios-mobTests */,
 				95AFE2C21A3ED99F008B12A0 /* Products */,
+				0A3B1B021A41C1CB004B1D42 /* Alamofire.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +205,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				0A3B1B0C1A41C1DD004B1D42 /* PBXTargetDependency */,
 			);
 			name = "ios-mob";
 			productName = "ios-mob";
@@ -172,6 +259,12 @@
 			mainGroup = 95AFE2B81A3ED99F008B12A0;
 			productRefGroup = 95AFE2C21A3ED99F008B12A0 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 0A3B1B031A41C1CB004B1D42 /* Products */;
+					ProjectRef = 0A3B1B021A41C1CB004B1D42 /* Alamofire.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				95AFE2C01A3ED99F008B12A0 /* ios-mob */,
@@ -180,15 +273,42 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		0A3B1B081A41C1CB004B1D42 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 0A3B1B071A41C1CB004B1D42 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0A3B1B0A1A41C1CB004B1D42 /* AlamofireTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AlamofireTests.xctest;
+			remoteRef = 0A3B1B091A41C1CB004B1D42 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		95AFE2BF1A3ED99F008B12A0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A1DE64B1A406CC000A1C67F /* Lato-Bold.ttf in Resources */,
 				0A1DE5D51A3F250F00A1C67F /* Main.storyboard in Resources */,
+				0A1DE64E1A406CC000A1C67F /* Lato-HairlineItalic.ttf in Resources */,
+				0A1DE6501A406CC000A1C67F /* Lato-Light.ttf in Resources */,
 				0A1DE5D21A3F250F00A1C67F /* Images.xcassets in Resources */,
+				0A1DE64F1A406CC000A1C67F /* Lato-Italic.ttf in Resources */,
+				0A1DE64C1A406CC000A1C67F /* Lato-BoldItalic.ttf in Resources */,
+				0A1DE64A1A406CC000A1C67F /* Lato-BlackItalic.ttf in Resources */,
+				0A1DE64D1A406CC000A1C67F /* Lato-Hairline.ttf in Resources */,
 				0A1DE5D31A3F250F00A1C67F /* Info.plist in Resources */,
+				0A1DE6491A406CC000A1C67F /* Lato-Black.ttf in Resources */,
+				0A1DE6521A406CC000A1C67F /* Lato-Regular.ttf in Resources */,
 				0A1DE5D41A3F250F00A1C67F /* LaunchScreen.xib in Resources */,
+				0A1DE6511A406CC000A1C67F /* Lato-LightItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,7 +327,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A1DE5D11A3F250F00A1C67F /* AppDelegate.swift in Sources */,
+				0A1DE63B1A403A9600A1C67F /* CustomCell.swift in Sources */,
+				0A1DE6561A4099C300A1C67F /* AddViewController.swift in Sources */,
+				0A1DE6541A40837B00A1C67F /* DetailViewController.swift in Sources */,
 				0A1DE5D61A3F250F00A1C67F /* ViewController.swift in Sources */,
+				0A1DE63D1A403DBC00A1C67F /* Recipe.swift in Sources */,
+				0A1DE6581A409CD000A1C67F /* EditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +347,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0A3B1B0C1A41C1DD004B1D42 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			targetProxy = 0A3B1B0B1A41C1DD004B1D42 /* PBXContainerItemProxy */;
+		};
 		95AFE2D81A3ED99F008B12A0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 95AFE2C01A3ED99F008B12A0 /* ios-mob */;
