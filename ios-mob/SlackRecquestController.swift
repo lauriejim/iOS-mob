@@ -11,6 +11,7 @@ import Alamofire
 
 class SlackRequestController: UIViewController {
     
+    var channels = [String]()
     
     func postMessage(channel:String, message:String, botName:String) {
         var req = SlackRequest()
@@ -23,13 +24,13 @@ class SlackRequestController: UIViewController {
             if (jsonObject["error"] != nil) {
                 return self.error(jsonObject)
             }
+            
+            self.success()
         }
     }
     
     func getChannelList() {
         var req = SlackRequest()
-        var channels = [String]()
-        
         Alamofire.request(.POST, req.url + "channels.list", parameters: req.params, encoding: ParameterEncoding.URL).responseJSON { (urlRequest:NSURLRequest, urlResponse:NSHTTPURLResponse?, jsonResponse:AnyObject?, error:NSError?) -> Void in
             
             var jsonObject = jsonResponse as NSDictionary
@@ -43,9 +44,10 @@ class SlackRequestController: UIViewController {
             for var i = 0; i < channelsObject.count; i++ {
                 var channelName = channelsObject[i]["name"] as String
                 channelName = "#" + channelName
-                channels.append(channelName)
+                self.channels.append(channelName)
             }
-            println(channels)
+            
+            println(self.channels)
         }
         
     }
@@ -58,4 +60,19 @@ class SlackRequestController: UIViewController {
         alert.show()
     }
     
+    func success() {
+        let alert = UIAlertView()
+        alert.title = "Success"
+        alert.message = "Message envoyé!"
+        alert.addButtonWithTitle("Continuer")
+        alert.show()
+    }
+    
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        println("segue : \(segue) -> id : \(segue.identifier)")
+//        
+//        var addViewController = segue.destinationViewController as AddViewController
+//        addViewController.channelList = self.channels
+//    }
+//    
 }

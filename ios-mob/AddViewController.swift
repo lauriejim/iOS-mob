@@ -8,18 +8,26 @@
 
 import UIKit
 
-class AddViewController: UIViewController {
+class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    var channelsList:[String] = []
+    var currentChannel:String?
+    
     @IBOutlet weak var recipeNameField: UITextField!
     @IBOutlet weak var messageField: UITextView!
-    @IBOutlet weak var channelField: UITextField!
     @IBOutlet weak var botNameField: UITextField!
+    @IBOutlet weak var addTableView: UITableView!
+    @IBOutlet weak var channelPicker: UIPickerView!
     // @IBOutlet weak var imageField: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         // Do any additional setup after loading the view.
+        // Close keyboard
+        var tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
+        addTableView.addGestureRecognizer(tap)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,8 +43,9 @@ class AddViewController: UIViewController {
         var dataSet: NSMutableDictionary = NSMutableDictionary()
         dataSet.setObject(recipeNameField.text, forKey: "recipeName")
         dataSet.setObject(messageField.text, forKey: "message")
-        dataSet.setObject(channelField.text, forKey: "channel")
+        dataSet.setObject(currentChannel!, forKey: "channel")
         dataSet.setObject(botNameField.text, forKey: "username")
+        println(self.currentChannel)
         // dataSet.setObject(imageField.image, forKey: "image")
         
         if (itemList != nil) {
@@ -61,14 +70,23 @@ class AddViewController: UIViewController {
         self.navigationController?.popToRootViewControllerAnimated(true)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
     }
-    */
-
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return channelsList.count
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+        return "\(channelsList[row])"
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.currentChannel = channelsList[row] as String
+    }
+    
+    func DismissKeyboard(){
+        addTableView.endEditing(true)
+    }
 }

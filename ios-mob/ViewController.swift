@@ -9,32 +9,54 @@
 import UIKit
 import Alamofire
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: SlackRequestController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var myTableView: UITableView!
     
 //  var arrayOfRecipes: [Recipe] = [Recipe]()
     var recipeItems: NSMutableArray = NSMutableArray()
+    var channelsList = [String]()
     
     override func viewDidAppear(animated: Bool) {
         var userDefaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
-        var itemListFromUserDefaults: NSMutableArray? = userDefaults.objectForKey("itemList") as? NSMutableArray
+        var itemListFromUserDefaults: NSArray? = userDefaults.objectForKey("itemList") as? NSArray
         
         if (itemListFromUserDefaults != nil) {
-            recipeItems = itemListFromUserDefaults!
+            recipeItems = NSMutableArray(array: itemListFromUserDefaults!)
         }
         
         self.myTableView.reloadData()
+        
+        // Get channels 
+        var req = SlackRequest()
+        self.channelsList = []
+        Alamofire.request(.POST, req.url + "channels.list", parameters: req.params, encoding: ParameterEncoding.URL).responseJSON { (urlRequest:NSURLRequest, urlResponse:NSHTTPURLResponse?, jsonResponse:AnyObject?, error:NSError?) -> Void in
+            
+            var jsonObject = jsonResponse as NSDictionary
+            
+            if (jsonObject["error"] != nil) {
+                return self.error(jsonObject)
+            }
+            
+            var channelsObject = jsonObject["channels"] as NSArray
+            
+            for var i = 0; i < channelsObject.count; i++ {
+                var channelName = channelsObject[i]["name"] as String
+                channelName = "#" + channelName
+                self.channelsList.append(channelName)
+            }
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
-//        self.setUpRecipes()
+        // self.setUpRecipes()
         self.myTableView.delegate = self
         self.myTableView.dataSource = self
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -89,17 +111,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         var channel = item["channel"] as String
         var botName = item["username"] as String
         
-        SlackRequestController().postMessage("#" + channel, message: message, botName: botName)
+        SlackRequestController().postMessage(channel, message: message, botName: botName)
         
     }
-    
-//    @IBAction func postRecipe(sender: AnyObject) {
-//        let alert = UIAlertController(title: "Post", message: "Message envoyé!", preferredStyle: UIAlertControllerStyle.Alert)
-//        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: nil))
-//        self.presentViewController(alert, animated: true, completion: nil)
-//        
-//        println("post")
-//    }
     
     // Delete with swipe left
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -125,6 +139,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //        self.presentViewController(detailedViewController, animated: true, completion: nil)
 //        
 //    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        println("segue : \(segue) -> id : \(segue.identifier)")
+        
+        var addViewController = segue.destinationViewController as AddViewController
+        addViewController.channelsList = self.channelsList
+    }
     
 }
 
