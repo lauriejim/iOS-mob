@@ -93,7 +93,12 @@ class ViewController: SlackRequestController, UITableViewDataSource, UITableView
         let cell: CustomCell = tableView.dequeueReusableCellWithIdentifier("Cell") as CustomCell
         let recipeItem: NSDictionary = recipeItems.objectAtIndex(indexPath.row) as NSDictionary
         
-        cell.setCell(recipeItem.objectForKey("recipeName") as String, messageLabel: recipeItem.objectForKey("message") as String, channelLabel: recipeItem.objectForKey("channel") as String, botLabel: recipeItem.objectForKey("username") as String, index: indexPath.row)
+        var title = recipeItem.objectForKey("recipeName") as String
+        var username = recipeItem.objectForKey("username") as String
+        var message = recipeItem.objectForKey("message") as String
+        var channel = recipeItem.objectForKey("channel") as String
+        
+        cell.setCell(title, messageLabel: message, channelLabel: channel, botLabel: username, index: indexPath.row)
 
         return cell
     }
@@ -140,9 +145,7 @@ class ViewController: SlackRequestController, UITableViewDataSource, UITableView
 //        
 //    }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        println("segue : \(segue) -> id : \(segue.identifier)")
-        
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {        
         var addViewController = segue.destinationViewController as AddViewController
         addViewController.channelsList = self.channelsList
     }

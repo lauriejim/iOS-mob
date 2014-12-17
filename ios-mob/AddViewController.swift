@@ -11,7 +11,7 @@ import UIKit
 class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     var channelsList:[String] = []
-    var currentChannel:String?
+    var currentChannel = "Aucun channel"
     
     @IBOutlet weak var recipeNameField: UITextField!
     @IBOutlet weak var messageField: UITextView!
@@ -43,9 +43,8 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         var dataSet: NSMutableDictionary = NSMutableDictionary()
         dataSet.setObject(recipeNameField.text, forKey: "recipeName")
         dataSet.setObject(messageField.text, forKey: "message")
-        dataSet.setObject(currentChannel!, forKey: "channel")
+        dataSet.setObject(currentChannel as String, forKey: "channel")
         dataSet.setObject(botNameField.text, forKey: "username")
-        println(self.currentChannel)
         // dataSet.setObject(imageField.image, forKey: "image")
         
         if (itemList != nil) {

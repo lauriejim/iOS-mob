@@ -30,6 +30,9 @@
 		0A1DE6581A409CD000A1C67F /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1DE6571A409CD000A1C67F /* EditViewController.swift */; };
 		0A3B1B0E1A41C284004B1D42 /* SlackRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B1B0D1A41C284004B1D42 /* SlackRequest.swift */; };
 		0A3B1B121A41C45C004B1D42 /* SlackRecquestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B1B111A41C45C004B1D42 /* SlackRecquestController.swift */; };
+		0AEB6AFD1A41FD6E00112077 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AEB6AF81A41F9E700112077 /* Alamofire.framework */; };
+		0AEB6AFE1A41FD7A00112077 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AEB6AF81A41F9E700112077 /* Alamofire.framework */; };
+		0AEB6AFF1A41FD7A00112077 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0AEB6AF81A41F9E700112077 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		95AFE2DD1A3ED99F008B12A0 /* ios_mobTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AFE2DC1A3ED99F008B12A0 /* ios_mobTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +58,13 @@
 			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
 			remoteInfo = Alamofire;
 		};
+		0AEB6B001A41FD7A00112077 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AEB6AF21A41F9E700112077 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
 		95AFE2D71A3ED99F008B12A0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 95AFE2B91A3ED99F008B12A0 /* Project object */;
@@ -63,6 +73,20 @@
 			remoteInfo = "ios-mob";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0AEB6B021A41FD7B00112077 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0AEB6AFF1A41FD7A00112077 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0A1DE5CB1A3F250F00A1C67F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +124,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AEB6AFD1A41FD6E00112077 /* Alamofire.framework in Frameworks */,
+				0AEB6AFE1A41FD7A00112077 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,11 +233,13 @@
 				95AFE2BD1A3ED99F008B12A0 /* Sources */,
 				95AFE2BE1A3ED99F008B12A0 /* Frameworks */,
 				95AFE2BF1A3ED99F008B12A0 /* Resources */,
+				0AEB6B021A41FD7B00112077 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				0AEB6AFC1A41F9EE00112077 /* PBXTargetDependency */,
+				0AEB6B011A41FD7A00112077 /* PBXTargetDependency */,
 			);
 			name = "ios-mob";
 			productName = "ios-mob";
@@ -360,6 +388,11 @@
 			name = Alamofire;
 			targetProxy = 0AEB6AFB1A41F9EE00112077 /* PBXContainerItemProxy */;
 		};
+		0AEB6B011A41FD7A00112077 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			targetProxy = 0AEB6B001A41FD7A00112077 /* PBXContainerItemProxy */;
+		};
 		95AFE2D81A3ED99F008B12A0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 95AFE2C01A3ED99F008B12A0 /* ios-mob */;
@@ -449,6 +482,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "ios-mob/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -460,6 +494,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "ios-mob/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
