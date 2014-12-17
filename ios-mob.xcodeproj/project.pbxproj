@@ -28,6 +28,8 @@
 		0A1DE6541A40837B00A1C67F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1DE6531A40837B00A1C67F /* DetailViewController.swift */; };
 		0A1DE6561A4099C300A1C67F /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1DE6551A4099C300A1C67F /* AddViewController.swift */; };
 		0A1DE6581A409CD000A1C67F /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1DE6571A409CD000A1C67F /* EditViewController.swift */; };
+		0A3B1B0E1A41C284004B1D42 /* SlackRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B1B0D1A41C284004B1D42 /* SlackRequest.swift */; };
+		0A3B1B121A41C45C004B1D42 /* SlackRecquestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B1B111A41C45C004B1D42 /* SlackRecquestController.swift */; };
 		95AFE2DD1A3ED99F008B12A0 /* ios_mobTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AFE2DC1A3ED99F008B12A0 /* ios_mobTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +87,8 @@
 		0A1DE6551A4099C300A1C67F /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		0A1DE6571A409CD000A1C67F /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		0A3B1B021A41C1CB004B1D42 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = ../../../../../Users/Kevin/.Trash/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		0A3B1B0D1A41C284004B1D42 /* SlackRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlackRequest.swift; sourceTree = "<group>"; };
+		0A3B1B111A41C45C004B1D42 /* SlackRecquestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlackRecquestController.swift; sourceTree = "<group>"; };
 		95AFE2C11A3ED99F008B12A0 /* ios-mob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-mob.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95AFE2D61A3ED99F008B12A0 /* ios-mobTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-mobTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95AFE2DB1A3ED99F008B12A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -123,6 +127,8 @@
 				0A1DE6531A40837B00A1C67F /* DetailViewController.swift */,
 				0A1DE6551A4099C300A1C67F /* AddViewController.swift */,
 				0A1DE6571A409CD000A1C67F /* EditViewController.swift */,
+				0A3B1B0D1A41C284004B1D42 /* SlackRequest.swift */,
+				0A3B1B111A41C45C004B1D42 /* SlackRecquestController.swift */,
 			);
 			path = "ios-mob";
 			sourceTree = "<group>";
@@ -330,7 +336,9 @@
 				0A1DE63B1A403A9600A1C67F /* CustomCell.swift in Sources */,
 				0A1DE6561A4099C300A1C67F /* AddViewController.swift in Sources */,
 				0A1DE6541A40837B00A1C67F /* DetailViewController.swift in Sources */,
+				0A3B1B0E1A41C284004B1D42 /* SlackRequest.swift in Sources */,
 				0A1DE5D61A3F250F00A1C67F /* ViewController.swift in Sources */,
+				0A3B1B121A41C45C004B1D42 /* SlackRecquestController.swift in Sources */,
 				0A1DE63D1A403DBC00A1C67F /* Recipe.swift in Sources */,
 				0A1DE6581A409CD000A1C67F /* EditViewController.swift in Sources */,
 			);

@@ -83,7 +83,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     // Cell post button
     @IBAction func sendRecipe(sender: UIButton) {
-        println(recipeItems.objectAtIndex(sender.tag))
+        var item: AnyObject = recipeItems.objectAtIndex(sender.tag)
+        
+        var message = item["message"] as String
+        var channel = item["channel"] as String
+        var botName = item["username"] as String
+        
+        SlackRequestController().postMessage("#" + channel, message: message, botName: botName)
+        
     }
     
 //    @IBAction func postRecipe(sender: AnyObject) {
