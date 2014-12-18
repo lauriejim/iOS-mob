@@ -11,7 +11,7 @@ import UIKit
 class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     var channelsList:[String] = []
-    var currentChannel = "Aucun channel"
+    var currentChannel = "0 channel"
     var token = ""
     
     @IBOutlet weak var recipeNameField: UITextField!
