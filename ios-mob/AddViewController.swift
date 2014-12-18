@@ -26,8 +26,7 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         // Do any additional setup after loading the view.
         // Close keyboard
         var tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
-        addTableView.addGestureRecognizer(tap)
-        
+        addTableView.addGestureRecognizer(tap)        
     }
 
     override func didReceiveMemoryWarning() {

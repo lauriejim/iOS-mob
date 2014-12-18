@@ -7,15 +7,12 @@
 //
 
 import UIKit
-import Alamofire
 
 class ViewController: SlackRequestController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var myTableView: UITableView!
     
-//  var arrayOfRecipes: [Recipe] = [Recipe]()
     var recipeItems: NSMutableArray = NSMutableArray()
-    var channelsList = [String]()
     
     override func viewDidAppear(animated: Bool) {
         var userDefaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
@@ -28,24 +25,8 @@ class ViewController: SlackRequestController, UITableViewDataSource, UITableView
         self.myTableView.reloadData()
         
         // Get channels 
-        var req = SlackRequest()
-        self.channelsList = []
-        Alamofire.request(.POST, req.url + "channels.list", parameters: req.params, encoding: ParameterEncoding.URL).responseJSON { (urlRequest:NSURLRequest, urlResponse:NSHTTPURLResponse?, jsonResponse:AnyObject?, error:NSError?) -> Void in
-            
-            var jsonObject = jsonResponse as NSDictionary
-            
-            if (jsonObject["error"] != nil) {
-                return self.error(jsonObject)
-            }
-            
-            var channelsObject = jsonObject["channels"] as NSArray
-            
-            for var i = 0; i < channelsObject.count; i++ {
-                var channelName = channelsObject[i]["name"] as String
-                channelName = "#" + channelName
-                self.channelsList.append(channelName)
-            }
-        }
+        self.channels = []
+        self.getChannelList()
     }
     
     override func viewDidLoad() {
@@ -63,33 +44,12 @@ class ViewController: SlackRequestController, UITableViewDataSource, UITableView
         // Dispose of any resources that can be recreated.
     }
     
-    // Add Recipes
-//    func setUpRecipes(){
-//        var recipe1 = Recipe(recipeName: "Arrived at Hétic", username: "Bobneick", message: "Hi boys. I'm Tina. Hey Jimmy Jr.", channel: "#test", imageName: "http://lorempixel.com/48/48")
-//        var recipe2 = Recipe(recipeName: "Want a burger", username: "Bobneick", message: "Hi boys. I'm hungry.", channel: "#test", imageName: "http://lorempixel.com/48/48")
-//        
-//        arrayOfRecipes.append(recipe1)
-//        arrayOfRecipes.append(recipe2)
-//        arrayOfRecipes.append(recipe1)
-//        arrayOfRecipes.append(recipe2)
-//        arrayOfRecipes.append(recipe1)
-//        arrayOfRecipes.append(recipe2)
-//        arrayOfRecipes.append(recipe1)
-//        arrayOfRecipes.append(recipe2)
-//        
-//    }
-
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return recipeItems.count
     }
     
     // List View
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//        let cell: CustomCell = tableView.dequeueReusableCellWithIdentifier("Cell") as CustomCell
-//        let recipe = arrayOfRecipes[indexPath.row]
-//        
-//        cell.setCell(recipe.recipeName, messageLabel: recipe.message, channelLabel: recipe.channel, botLabel: recipe.username, botImageView: recipe.imageName)
-
         let cell: CustomCell = tableView.dequeueReusableCellWithIdentifier("Cell") as CustomCell
         let recipeItem: NSDictionary = recipeItems.objectAtIndex(indexPath.row) as NSDictionary
         
@@ -145,9 +105,9 @@ class ViewController: SlackRequestController, UITableViewDataSource, UITableView
 //        
 //    }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {        
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         var addViewController = segue.destinationViewController as AddViewController
-        addViewController.channelsList = self.channelsList
+        addViewController.channelsList = self.channels
     }
     
 }

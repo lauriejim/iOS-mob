@@ -46,8 +46,7 @@ class SlackRequestController: UIViewController {
                 channelName = "#" + channelName
                 self.channels.append(channelName)
             }
-            
-            println(self.channels)
+
         }
         
     }

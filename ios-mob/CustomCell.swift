@@ -29,11 +29,6 @@ class CustomCell: UITableViewCell {
     }
 
     func setCell(recipeNameLabel:String, messageLabel:String, channelLabel:String, botLabel:String, index:Int) {
-//        self.recipeNameLabel.text = recipeNameLabel
-//        self.messageLabel.text = messageLabel
-//        self.channelLabel.text = channelLabel
-//        self.botLabel.text = botLabel
-//        
         // Image
         dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
             self.botImageView.image =  UIImage(data: NSData(contentsOfURL: NSURL(string:"http://lorempixel.com/48/48")!)!)
