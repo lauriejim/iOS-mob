@@ -32,6 +32,7 @@
 		0AEB6AFD1A41FD6E00112077 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AEB6AF81A41F9E700112077 /* Alamofire.framework */; };
 		0AEB6AFE1A41FD7A00112077 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AEB6AF81A41F9E700112077 /* Alamofire.framework */; };
 		0AEB6AFF1A41FD7A00112077 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0AEB6AF81A41F9E700112077 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0AEB6B041A42D26700112077 /* ConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEB6B031A42D26700112077 /* ConnectionViewController.swift */; };
 		95AFE2DD1A3ED99F008B12A0 /* ios_mobTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AFE2DC1A3ED99F008B12A0 /* ios_mobTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +112,7 @@
 		0A3B1B0D1A41C284004B1D42 /* SlackRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlackRequest.swift; sourceTree = "<group>"; };
 		0A3B1B111A41C45C004B1D42 /* SlackRecquestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlackRecquestController.swift; sourceTree = "<group>"; };
 		0AEB6AF21A41F9E700112077 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		0AEB6B031A42D26700112077 /* ConnectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionViewController.swift; sourceTree = "<group>"; };
 		95AFE2C11A3ED99F008B12A0 /* ios-mob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-mob.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95AFE2D61A3ED99F008B12A0 /* ios-mobTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-mobTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95AFE2DB1A3ED99F008B12A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -149,9 +151,10 @@
 				0A1DE5D01A3F250F00A1C67F /* ViewController.swift */,
 				0A1DE6531A40837B00A1C67F /* DetailViewController.swift */,
 				0A1DE6551A4099C300A1C67F /* AddViewController.swift */,
-				0A1DE6571A409CD000A1C67F /* EditViewController.swift */,
 				0A3B1B0D1A41C284004B1D42 /* SlackRequest.swift */,
+				0A1DE6571A409CD000A1C67F /* EditViewController.swift */,
 				0A3B1B111A41C45C004B1D42 /* SlackRecquestController.swift */,
+				0AEB6B031A42D26700112077 /* ConnectionViewController.swift */,
 			);
 			path = "ios-mob";
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				0A1DE5D61A3F250F00A1C67F /* ViewController.swift in Sources */,
 				0A3B1B121A41C45C004B1D42 /* SlackRecquestController.swift in Sources */,
 				0A1DE6581A409CD000A1C67F /* EditViewController.swift in Sources */,
+				0AEB6B041A42D26700112077 /* ConnectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

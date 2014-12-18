@@ -9,22 +9,37 @@
 import UIKit
 
 class SlackRequest: NSObject {
-    let token = "xoxp-3221071404-3221071414-3221836016-5659d9"
+    var token = ""
     let url = "https://slack.com/api/"
-    var params:[String: String]!
+    var params:[String: String]!    
     
     override init() {
         self.params = [
-            "token": token
+            "token": self.token
         ]
     }
     
     func setMessage(channel:String, message:String, botName:String) {
         self.params = [
-            "token": token,
+            "token": self.token,
             "channel": channel,
             "username": botName,
             "text": message
+        ]
+    }
+    
+    func setCode(code:String) {
+        self.params = [
+            "client_id": "3221071404.3240178857",
+            "client_secret": "292827669602c867cd940a1276a2c358",
+            "code": code
+        ]
+    }
+    
+    func setToken(token:String) {
+        self.token = token
+        self.params = [
+            "token": token
         ]
     }
 }

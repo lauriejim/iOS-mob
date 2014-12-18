@@ -28,19 +28,12 @@ class CustomCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    func setCell(recipeNameLabel:String, messageLabel:String, channelLabel:String, botLabel:String, index:Int) {
-        // Image
-        dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
-            self.botImageView.image =  UIImage(data: NSData(contentsOfURL: NSURL(string:"http://lorempixel.com/48/48")!)!)
-            // Border radius
-            self.botImageView.layer.cornerRadius = self.botImageView.frame.size.width / 2;
-            self.botImageView.clipsToBounds = true;
-        })
-
+    func setCell(recipeNameLabel:String, messageLabel:String, channelLabel:String, botLabel:String, botImage:String, index:Int) {
         self.recipeNameLabel.text = recipeNameLabel
         self.messageLabel.text = messageLabel
         self.channelLabel.text = channelLabel
         self.botLabel.text = botLabel
+        self.botImageView.image = UIImage(named: botImage)
         self.postButton.tag = index
     }
     

@@ -13,6 +13,7 @@ class ViewController: SlackRequestController, UITableViewDataSource, UITableView
     @IBOutlet weak var myTableView: UITableView!
     
     var recipeItems: NSMutableArray = NSMutableArray()
+    var tokenId = ""
     
     override func viewDidAppear(animated: Bool) {
         var userDefaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
@@ -24,9 +25,11 @@ class ViewController: SlackRequestController, UITableViewDataSource, UITableView
         
         self.myTableView.reloadData()
         
-        // Get channels 
+        // Get channels
         self.channels = []
+        self.setToken(self.tokenId)
         self.getChannelList()
+
     }
     
     override func viewDidLoad() {
@@ -57,8 +60,9 @@ class ViewController: SlackRequestController, UITableViewDataSource, UITableView
         var username = recipeItem.objectForKey("username") as String
         var message = recipeItem.objectForKey("message") as String
         var channel = recipeItem.objectForKey("channel") as String
-        
-        cell.setCell(title, messageLabel: message, channelLabel: channel, botLabel: username, index: indexPath.row)
+        var botImage = "bot-ico.png"
+
+        cell.setCell(title, messageLabel: message, channelLabel: channel, botLabel: username, botImage: botImage, index: indexPath.row)
 
         return cell
     }
@@ -76,7 +80,7 @@ class ViewController: SlackRequestController, UITableViewDataSource, UITableView
         var channel = item["channel"] as String
         var botName = item["username"] as String
         
-        SlackRequestController().postMessage(channel, message: message, botName: botName)
+        self.postMessage(channel, message: message, botName: botName)
         
     }
     
@@ -107,6 +111,7 @@ class ViewController: SlackRequestController, UITableViewDataSource, UITableView
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         var addViewController = segue.destinationViewController as AddViewController
+        addViewController.token = self.tokenId
         addViewController.channelsList = self.channels
     }
     

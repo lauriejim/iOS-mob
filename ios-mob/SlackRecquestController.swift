@@ -12,12 +12,13 @@ import Alamofire
 class SlackRequestController: UIViewController {
     
     var channels = [String]()
+    var token = ""
+    var req = SlackRequest()
     
     func postMessage(channel:String, message:String, botName:String) {
-        var req = SlackRequest()
-        req.setMessage(channel, message: message, botName: botName)
+        self.req.setMessage(channel, message: message, botName: botName)
         
-        Alamofire.request(.POST, req.url + "chat.postMessage", parameters: req.params, encoding: ParameterEncoding.URL).responseJSON { (urlRequest:NSURLRequest, urlResponse:NSHTTPURLResponse?, jsonResponse:AnyObject?, error:NSError?) -> Void in
+        Alamofire.request(.POST, self.req.url + "chat.postMessage", parameters: self.req.params, encoding: ParameterEncoding.URL).responseJSON { (urlRequest:NSURLRequest, urlResponse:NSHTTPURLResponse?, jsonResponse:AnyObject?, error:NSError?) -> Void in
             
             var jsonObject = jsonResponse as NSDictionary
             
@@ -29,9 +30,33 @@ class SlackRequestController: UIViewController {
         }
     }
     
-    func getChannelList() {
+    func getToken(code:String) {
         var req = SlackRequest()
-        Alamofire.request(.POST, req.url + "channels.list", parameters: req.params, encoding: ParameterEncoding.URL).responseJSON { (urlRequest:NSURLRequest, urlResponse:NSHTTPURLResponse?, jsonResponse:AnyObject?, error:NSError?) -> Void in
+        req.setCode(code)
+        
+        Alamofire.request(.POST, req.url + "oauth.access", parameters: req.params, encoding: ParameterEncoding.URL).responseJSON { (urlRequest:NSURLRequest, urlResponse:NSHTTPURLResponse?, jsonResponse:AnyObject?, error:NSError?) -> Void in
+            
+            var jsonObject = jsonResponse as NSDictionary
+            
+            if (jsonObject["error"] != nil) {
+                return self.error(jsonObject)
+            }
+
+            self.token = jsonObject["access_token"] as String
+            
+            let viewController = self.storyboard?.instantiateViewControllerWithIdentifier("ViewController") as ViewController
+            viewController.tokenId = self.token
+            self.navigationController?.pushViewController(viewController, animated: false)
+            
+        }
+    }
+    
+    func setToken(token:String) {
+        self.req.setToken(token)
+    }
+    
+    func getChannelList() {
+        Alamofire.request(.POST, self.req.url + "channels.list", parameters: self.req.params, encoding: ParameterEncoding.URL).responseJSON { (urlRequest:NSURLRequest, urlResponse:NSHTTPURLResponse?, jsonResponse:AnyObject?, error:NSError?) -> Void in
             
             var jsonObject = jsonResponse as NSDictionary
             
@@ -68,10 +93,12 @@ class SlackRequestController: UIViewController {
     }
     
 //    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        println("segue : \(segue) -> id : \(segue.identifier)")
+//        var viewController: ViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ViewController") as ViewController
+//        viewController.tokenId = self.token
+//        self.presentViewController(viewController, animated: true, completion: nil)
 //        
-//        var addViewController = segue.destinationViewController as AddViewController
-//        addViewController.channelList = self.channels
+//        var viewController = segue.destinationViewController as ViewController
+//
 //    }
-//    
+    
 }

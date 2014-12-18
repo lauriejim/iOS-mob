@@ -12,6 +12,7 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
 
     var channelsList:[String] = []
     var currentChannel = "Aucun channel"
+    var token = ""
     
     @IBOutlet weak var recipeNameField: UITextField!
     @IBOutlet weak var messageField: UITextView!
@@ -26,7 +27,17 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         // Do any additional setup after loading the view.
         // Close keyboard
         var tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
-        addTableView.addGestureRecognizer(tap)        
+        addTableView.addGestureRecognizer(tap)
+        
+        self.recipeNameField.layer.borderColor = UIColor.lightGrayColor().CGColor
+        self.recipeNameField.layer.borderWidth = 1.0
+        self.recipeNameField.layer.cornerRadius = 8
+        self.botNameField.layer.borderColor = UIColor.lightGrayColor().CGColor
+        self.botNameField.layer.borderWidth = 1.0
+        self.botNameField.layer.cornerRadius = 8
+        self.messageField.layer.borderColor = UIColor.lightGrayColor().CGColor
+        self.messageField.layer.borderWidth = 1.0
+        self.messageField.layer.cornerRadius = 8
     }
 
     override func didReceiveMemoryWarning() {
@@ -65,7 +76,16 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         
         userDefaults.synchronize()
         
-        self.navigationController?.popToRootViewControllerAnimated(true)
+        let viewController = self.storyboard?.instantiateViewControllerWithIdentifier("ViewController") as ViewController
+        viewController.tokenId = self.token
+        self.navigationController?.pushViewController(viewController, animated: true)
+
+    }
+    
+    @IBAction func closeAddView(sender: AnyObject) {
+        var viewController = self.storyboard?.instantiateViewControllerWithIdentifier("ViewController") as ViewController
+        viewController.tokenId = self.token
+        self.navigationController?.pushViewController(viewController, animated: false)
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -86,5 +106,10 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     
     func DismissKeyboard(){
         addTableView.endEditing(true)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var viewController = segue.destinationViewController as ViewController
+        viewController.tokenId = self.token
     }
 }
