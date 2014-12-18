@@ -90,6 +90,7 @@ class SlackRequestController: UIViewController {
         alert.message = "Message envoyé!"
         alert.addButtonWithTitle("Continuer")
         alert.show()
+//        self.successMessage.hidden = false
     }
     
 //    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

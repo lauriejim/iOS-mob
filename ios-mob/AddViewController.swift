@@ -78,7 +78,7 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         
         let viewController = self.storyboard?.instantiateViewControllerWithIdentifier("ViewController") as ViewController
         viewController.tokenId = self.token
-        self.navigationController?.pushViewController(viewController, animated: true)
+        self.navigationController?.pushViewController(viewController, animated: false)
 
     }
     

@@ -11,6 +11,7 @@ import UIKit
 class ViewController: SlackRequestController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var myTableView: UITableView!
+//    @IBOutlet weak var successMessage: UIView!
     
     var recipeItems: NSMutableArray = NSMutableArray()
     var tokenId = ""
@@ -79,9 +80,8 @@ class ViewController: SlackRequestController, UITableViewDataSource, UITableView
         var message = item["message"] as String
         var channel = item["channel"] as String
         var botName = item["username"] as String
-        
         self.postMessage(channel, message: message, botName: botName)
-        
+
     }
     
     // Delete with swipe left
