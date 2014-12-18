@@ -2,13 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <mutableArray key="Lato-Black.ttf">
-            <string>Lato-Black</string>
-        </mutableArray>
-    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -16,45 +10,54 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Slackie" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
-                    <rect key="frame" x="20" y="140" width="441" height="43"/>
-                    <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="48"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splashscreen" translatesAutoresizingMaskIntoConstraints="NO" id="r6G-Is-686">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="0.26666666666666666" green="0.21176470588235294" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="bottom" multiplier="1/3" constant="1" id="5cJ-9S-tgC"/>
-                <constraint firstAttribute="trailing" secondItem="kId-c2-rCX" secondAttribute="trailing" constant="19" id="CqG-PU-XJf"/>
-                <constraint firstAttribute="centerX" secondItem="kId-c2-rCX" secondAttribute="centerX" id="Koa-jz-hwk"/>
-                <constraint firstAttribute="bottom" secondItem="kId-c2-rCX" secondAttribute="bottom" constant="219" id="QY5-N7-oH1"/>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="WjZ-Jr-xaP"/>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="fvb-Df-36g"/>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="218" id="svX-WF-MVg"/>
+                <constraint firstAttribute="trailing" secondItem="r6G-Is-686" secondAttribute="trailing" id="GV5-NL-gto"/>
+                <constraint firstAttribute="bottom" secondItem="r6G-Is-686" secondAttribute="bottom" id="Hvc-G1-bZQ"/>
+                <constraint firstAttribute="trailing" secondItem="r6G-Is-686" secondAttribute="trailing" id="Mz5-2c-Dh4"/>
+                <constraint firstItem="r6G-Is-686" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="bRI-BI-Trr"/>
+                <constraint firstItem="r6G-Is-686" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="eZF-Zs-xCg"/>
+                <constraint firstItem="r6G-Is-686" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="hcn-3y-ApP"/>
+                <constraint firstItem="r6G-Is-686" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="z8K-e0-Tg9"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="r6G-Is-686"/>
+                </mask>
                 <mask key="constraints">
-                    <exclude reference="CqG-PU-XJf"/>
-                    <exclude reference="QY5-N7-oH1"/>
-                    <exclude reference="WjZ-Jr-xaP"/>
-                    <exclude reference="svX-WF-MVg"/>
+                    <exclude reference="GV5-NL-gto"/>
+                    <exclude reference="Hvc-G1-bZQ"/>
+                    <exclude reference="Mz5-2c-Dh4"/>
+                    <exclude reference="bRI-BI-Trr"/>
+                    <exclude reference="eZF-Zs-xCg"/>
+                    <exclude reference="hcn-3y-ApP"/>
+                    <exclude reference="z8K-e0-Tg9"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
+                <mask key="subviews">
+                    <include reference="r6G-Is-686"/>
+                </mask>
                 <mask key="constraints">
-                    <exclude reference="5cJ-9S-tgC"/>
-                    <include reference="CqG-PU-XJf"/>
-                    <exclude reference="Koa-jz-hwk"/>
-                    <include reference="QY5-N7-oH1"/>
-                    <include reference="WjZ-Jr-xaP"/>
-                    <exclude reference="fvb-Df-36g"/>
-                    <include reference="svX-WF-MVg"/>
+                    <include reference="GV5-NL-gto"/>
+                    <include reference="Hvc-G1-bZQ"/>
+                    <include reference="Mz5-2c-Dh4"/>
+                    <include reference="bRI-BI-Trr"/>
+                    <include reference="eZF-Zs-xCg"/>
+                    <include reference="hcn-3y-ApP"/>
+                    <include reference="z8K-e0-Tg9"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="548" y="455"/>
         </view>
     </objects>
+    <resources>
+        <image name="splashscreen" width="320" height="480"/>
+    </resources>
 </document>

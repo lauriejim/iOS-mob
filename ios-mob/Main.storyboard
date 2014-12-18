@@ -15,8 +15,11 @@
             <string>Lato-Black</string>
             <string>Lato-Black</string>
             <string>Lato-Black</string>
+            <string>Lato-Black</string>
+            <string>Lato-Black</string>
         </mutableArray>
         <mutableArray key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
             <string>Lato-Bold</string>
             <string>Lato-Bold</string>
             <string>Lato-Bold</string>
@@ -456,7 +459,7 @@
                             <color key="tintColor" red="0.26666666666666666" green="0.21176470588235294" blue="0.25882352941176467" alpha="0.0" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="qjj-Ds-kUc">
-                            <button key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="Gbd-e5-u1s">
+                            <button key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="Gbd-e5-u1s">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label=""/>
@@ -980,12 +983,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="gzx-k9-NBf" kind="relationship" relationship="rootViewController" id="iUx-Nx-YVZ"/>
+                        <segue destination="dAK-64-yh0" kind="relationship" relationship="rootViewController" id="sUB-hg-vI8"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b6k-I7-EBU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-54" y="464"/>
+            <point key="canvasLocation" x="-672" y="464"/>
         </scene>
         <!--Slackie-->
         <scene sceneID="yID-ce-4Av">
@@ -1056,11 +1059,142 @@
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="H1p-E7-s6h">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Slackie" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xse-SD-4cb">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="167" id="XYq-um-hWk"/>
+                                    <constraint firstAttribute="height" constant="61" id="YCZ-lv-2Jy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="50"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="XYq-um-hWk"/>
+                                        <exclude reference="YCZ-lv-2Jy"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="XYq-um-hWk"/>
+                                        <include reference="YCZ-lv-2Jy"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post to Slack with a tap of the finger." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PdJ-ix-9OK">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Kqk-nL-Ui1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Kqk-nL-Ui1"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Kqk-nL-Ui1"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oY4-jb-o63">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="16"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="90" maxY="0.0"/>
+                                <state key="normal" title="Connect with">
+                                    <color key="titleColor" red="0.57254901960000004" green="0.57254901960000004" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="gzx-k9-NBf" kind="show" id="XiY-jv-Abv"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slack-logo" translatesAutoresizingMaskIntoConstraints="NO" id="bDY-hx-mob">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="p1U-BY-W2J"/>
+                                    <constraint firstAttribute="width" constant="77" id="wJ3-rE-FPi"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="p1U-BY-W2J"/>
+                                        <exclude reference="wJ3-rE-FPi"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="p1U-BY-W2J"/>
+                                        <include reference="wJ3-rE-FPi"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.43507339015151514" green="0.33538309202317668" blue="0.42446575788690044" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="phr-mn-cip" firstAttribute="top" secondItem="bDY-hx-mob" secondAttribute="bottom" constant="51" id="30c-XV-gWK"/>
+                            <constraint firstItem="PdJ-ix-9OK" firstAttribute="leading" secondItem="H1p-E7-s6h" secondAttribute="leadingMargin" constant="49" id="6Zt-GO-AXr"/>
+                            <constraint firstItem="oY4-jb-o63" firstAttribute="bottom" secondItem="phr-mn-cip" secondAttribute="top" id="AM1-gb-22N"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bDY-hx-mob" secondAttribute="trailing" constant="78" id="CTl-4e-Lwp"/>
+                            <constraint firstItem="oY4-jb-o63" firstAttribute="centerY" secondItem="bDY-hx-mob" secondAttribute="centerY" id="PGS-jc-3dl"/>
+                            <constraint firstAttribute="trailing" secondItem="oY4-jb-o63" secondAttribute="trailing" id="Q34-aR-pdw"/>
+                            <constraint firstItem="Xse-SD-4cb" firstAttribute="top" secondItem="CFz-cB-5WX" secondAttribute="bottom" constant="155" id="a6K-wn-fAB"/>
+                            <constraint firstItem="oY4-jb-o63" firstAttribute="centerX" secondItem="Xse-SD-4cb" secondAttribute="centerX" id="c62-N6-Xid"/>
+                            <constraint firstItem="oY4-jb-o63" firstAttribute="leading" secondItem="H1p-E7-s6h" secondAttribute="leading" id="hhh-x1-tBl"/>
+                            <constraint firstItem="PdJ-ix-9OK" firstAttribute="top" secondItem="Xse-SD-4cb" secondAttribute="bottom" constant="3" id="tka-Pm-EO2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PdJ-ix-9OK" secondAttribute="trailing" constant="13" id="zJ2-jj-396"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Xse-SD-4cb"/>
+                                <exclude reference="PdJ-ix-9OK"/>
+                                <exclude reference="oY4-jb-o63"/>
+                                <exclude reference="bDY-hx-mob"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="a6K-wn-fAB"/>
+                                <exclude reference="6Zt-GO-AXr"/>
+                                <exclude reference="tka-Pm-EO2"/>
+                                <exclude reference="zJ2-jj-396"/>
+                                <exclude reference="AM1-gb-22N"/>
+                                <exclude reference="PGS-jc-3dl"/>
+                                <exclude reference="Q34-aR-pdw"/>
+                                <exclude reference="c62-N6-Xid"/>
+                                <exclude reference="hhh-x1-tBl"/>
+                                <exclude reference="CTl-4e-Lwp"/>
+                                <exclude reference="30c-XV-gWK"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Xse-SD-4cb"/>
+                                <include reference="PdJ-ix-9OK"/>
+                                <include reference="oY4-jb-o63"/>
+                                <include reference="bDY-hx-mob"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="a6K-wn-fAB"/>
+                                <include reference="6Zt-GO-AXr"/>
+                                <include reference="tka-Pm-EO2"/>
+                                <include reference="zJ2-jj-396"/>
+                                <include reference="AM1-gb-22N"/>
+                                <include reference="PGS-jc-3dl"/>
+                                <include reference="Q34-aR-pdw"/>
+                                <include reference="c62-N6-Xid"/>
+                                <include reference="hhh-x1-tBl"/>
+                                <include reference="CTl-4e-Lwp"/>
+                                <include reference="30c-XV-gWK"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="ZeX-Wu-GmE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sht-es-Vfi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="30" y="464"/>
         </scene>
     </scenes>
     <resources>
@@ -1068,6 +1202,7 @@
         <image name="bot-ico" width="55" height="51"/>
         <image name="edit-button" width="14" height="14"/>
         <image name="post-button" width="78" height="30"/>
+        <image name="slack-logo" width="86" height="26"/>
         <image name="submit-button" width="320" height="70"/>
     </resources>
 </document>
