@@ -25,7 +25,7 @@
                   symbolName = "ios_mob.DetailViewController.titleString.setter : Swift.Optional&lt;Swift.String&gt;"
                   moduleName = "ios-mob"
                   urlString = "file:///Applications/MAMP/htdocs/H4/iOS-mob/ios-mob/DetailViewController.swift"
-                  timestampString = "440616161.002701"
+                  timestampString = "440622711.96883"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
@@ -39,7 +39,7 @@
                   symbolName = "ios_mob.DetailViewController.titleString.materializeForSet : Swift.Optional&lt;Swift.String&gt;"
                   moduleName = "ios-mob"
                   urlString = "file:///Applications/MAMP/htdocs/H4/iOS-mob/ios-mob/DetailViewController.swift"
-                  timestampString = "440616161.002809"
+                  timestampString = "440622711.968991"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
@@ -53,7 +53,7 @@
                   symbolName = "ios_mob.DetailViewController.init (ios_mob.DetailViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;ObjectiveC.NSBundle&gt;) -&gt; ios_mob.DetailViewController"
                   moduleName = "ios-mob"
                   urlString = "file:///Applications/MAMP/htdocs/H4/iOS-mob/ios-mob/DetailViewController.swift"
-                  timestampString = "440616161.002961"
+                  timestampString = "440622711.969145"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
@@ -67,7 +67,7 @@
                   symbolName = "ios_mob.DetailViewController.init (ios_mob.DetailViewController.Type)() -&gt; ios_mob.DetailViewController"
                   moduleName = "ios-mob"
                   urlString = "file:///Applications/MAMP/htdocs/H4/iOS-mob/ios-mob/DetailViewController.swift"
-                  timestampString = "440616161.003114"
+                  timestampString = "440622711.969331"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
@@ -81,7 +81,7 @@
                   symbolName = "ios_mob.DetailViewController.init (ios_mob.DetailViewController.Type)(coder : ObjectiveC.NSCoder) -&gt; ios_mob.DetailViewController"
                   moduleName = "ios-mob"
                   urlString = "file:///Applications/MAMP/htdocs/H4/iOS-mob/ios-mob/DetailViewController.swift"
-                  timestampString = "440616161.003356"
+                  timestampString = "440622711.969562"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
@@ -89,38 +89,6 @@
                   offsetFromSymbolStart = "336">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ios-mob/ViewController.swift"
-            timestampString = "440614978.499894"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "viewDidAppear(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ios-mob/ViewController.swift"
-            timestampString = "440614978.499894"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "viewDidAppear(_:)"
-            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

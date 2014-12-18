@@ -77,20 +77,27 @@ class SlackRequestController: UIViewController {
     }
     
     func error(jsonObject:NSDictionary) {
-        let alert = UIAlertView()
-        alert.title = "Error"
-        alert.message = jsonObject["error"] as? String
-        alert.addButtonWithTitle("Back")
-        alert.show()
+//        let alert = UIAlertView()
+//        alert.title = "Error"
+//        alert.message = jsonObject["error"] as? String
+//        alert.addButtonWithTitle("Back")
+//        alert.show()
+        var viewController: ViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ViewController") as ViewController
+        viewController.fail = true
+        viewController.tokenId = self.req.params["token"]!
+        self.navigationController?.pushViewController(viewController, animated: false)
     }
     
     func success() {
-        let alert = UIAlertView()
-        alert.title = "Success"
-        alert.message = "Message envoyé!"
-        alert.addButtonWithTitle("Continuer")
-        alert.show()
-//        self.successMessage.hidden = false
+//        let alert = UIAlertView()
+//        alert.title = "Success"
+//        alert.message = "Message envoyé!"
+//        alert.addButtonWithTitle("Continuer")
+//        alert.show()
+        var viewController: ViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ViewController") as ViewController
+        viewController.success = true
+        viewController.tokenId = self.req.params["token"]!
+        self.navigationController?.pushViewController(viewController, animated: false)
     }
     
 //    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

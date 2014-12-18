@@ -11,10 +11,13 @@ import UIKit
 class ViewController: SlackRequestController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var myTableView: UITableView!
-//    @IBOutlet weak var successMessage: UIView!
+    @IBOutlet weak var successMessage: UIView!
+    @IBOutlet weak var failMessage: UIView!
     
     var recipeItems: NSMutableArray = NSMutableArray()
     var tokenId = ""
+    var success:Bool?
+    var fail:Bool?
     
     override func viewDidAppear(animated: Bool) {
         var userDefaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
@@ -30,7 +33,24 @@ class ViewController: SlackRequestController, UITableViewDataSource, UITableView
         self.channels = []
         self.setToken(self.tokenId)
         self.getChannelList()
-
+        
+        if (self.success) != nil {
+            self.successMessage.hidden = false
+            UIView.animateWithDuration(1.0, animations: {
+                self.successMessage.frame = CGRect(x: 0, y: 120 - 120, width: 50, height: 50)
+            }, completion: { finished in
+                self.updateSuccess()
+            })
+        }
+        
+        if (self.fail) != nil {
+            self.failMessage.hidden = false
+            UIView.animateWithDuration(1.0, animations: {
+                self.successMessage.frame = CGRect(x: 0, y: 120 - 120, width: 50, height: 50)
+                }, completion: { finished in
+                    self.updateFail()
+            })
+        }
     }
     
     override func viewDidLoad() {
@@ -68,6 +88,34 @@ class ViewController: SlackRequestController, UITableViewDataSource, UITableView
         return cell
     }
     
+    // Delete with swipe left
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            myTableView.beginUpdates()
+            recipeItems.removeObjectAtIndex(indexPath.row)
+            myTableView!.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            myTableView.endUpdates()
+        }
+    }
+    
+    func updateSuccess() {
+        var delta: Int64 = 2 * Int64(NSEC_PER_SEC)
+        var time = dispatch_time(DISPATCH_TIME_NOW, delta)
+        
+        dispatch_after(time, dispatch_get_main_queue(), {
+            self.successMessage.hidden = true
+        });
+    }
+    
+    func updateFail() {
+        var delta: Int64 = 2 * Int64(NSEC_PER_SEC)
+        var time = dispatch_time(DISPATCH_TIME_NOW, delta)
+        
+        dispatch_after(time, dispatch_get_main_queue(), {
+            self.failMessage.hidden = true
+        });
+    }
+    
     // Cell edit button
     @IBAction func editRecipe(sender: UIButton) {
         println("Edit")
@@ -82,16 +130,6 @@ class ViewController: SlackRequestController, UITableViewDataSource, UITableView
         var botName = item["username"] as String
         self.postMessage(channel, message: message, botName: botName)
 
-    }
-    
-    // Delete with swipe left
-    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == UITableViewCellEditingStyle.Delete {
-            myTableView.beginUpdates()
-            recipeItems.removeObjectAtIndex(indexPath.row)
-            myTableView!.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-            myTableView.endUpdates()
-        }
     }
     
     // Detail view

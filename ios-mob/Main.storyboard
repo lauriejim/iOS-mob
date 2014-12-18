@@ -14,6 +14,7 @@
             <string>Lato-Black</string>
             <string>Lato-Black</string>
             <string>Lato-Black</string>
+            <string>Lato-Black</string>
         </mutableArray>
         <mutableArray key="Lato-Bold.ttf">
             <string>Lato-Bold</string>
@@ -314,6 +315,31 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="s9F-Y5-Chw"/>
                                 </connections>
                             </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KW9-Vi-2nY">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oops, error. Please try again later." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uTS-ki-Ifq">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="75" y="11" width="250" height="21"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.83137254901960789" green="0.33333333333333331" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="uTS-ki-Ifq"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="uTS-ki-Ifq"/>
+                                    </mask>
+                                </variation>
+                            </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="him-ay-Suq">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
@@ -361,15 +387,23 @@
                             <constraint firstItem="u9Y-Sl-80j" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="7Vb-ll-4TM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="him-ay-Suq" secondAttribute="trailing" constant="-16" id="Cf9-Ob-mV3"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="u9Y-Sl-80j" secondAttribute="bottom" id="Crr-AM-wbi"/>
+                            <constraint firstItem="KW9-Vi-2nY" firstAttribute="leading" secondItem="him-ay-Suq" secondAttribute="leading" id="Ewq-fi-juO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="u9Y-Sl-80j" secondAttribute="trailing" constant="-16" id="HBu-8x-Llz"/>
+                            <constraint firstItem="KW9-Vi-2nY" firstAttribute="trailing" secondItem="him-ay-Suq" secondAttribute="trailing" id="LOX-3k-wsE"/>
                             <constraint firstItem="him-ay-Suq" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="LbZ-yq-pXr"/>
+                            <constraint firstItem="KW9-Vi-2nY" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="QCM-Ef-w6z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KW9-Vi-2nY" secondAttribute="trailing" constant="-16" id="SNP-cG-Til"/>
                             <constraint firstItem="u9Y-Sl-80j" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="ZoK-Vk-5US"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="him-ay-Suq" secondAttribute="bottom" id="bjt-rd-Xtr"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="u9Y-Sl-80j" secondAttribute="bottom" id="h8G-e3-9xF"/>
+                            <constraint firstItem="KW9-Vi-2nY" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="hmP-xS-Qjh"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="KW9-Vi-2nY" secondAttribute="bottom" id="mmX-Et-wYb"/>
+                            <constraint firstItem="KW9-Vi-2nY" firstAttribute="top" secondItem="him-ay-Suq" secondAttribute="top" id="oLs-OJ-VnS"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="u9Y-Sl-80j"/>
+                                <exclude reference="KW9-Vi-2nY"/>
                                 <exclude reference="him-ay-Suq"/>
                             </mask>
                             <mask key="constraints">
@@ -377,16 +411,24 @@
                                 <exclude reference="7Vb-ll-4TM"/>
                                 <exclude reference="HBu-8x-Llz"/>
                                 <exclude reference="ZoK-Vk-5US"/>
+                                <exclude reference="Ewq-fi-juO"/>
+                                <exclude reference="LOX-3k-wsE"/>
+                                <exclude reference="QCM-Ef-w6z"/>
+                                <exclude reference="SNP-cG-Til"/>
+                                <exclude reference="hmP-xS-Qjh"/>
+                                <exclude reference="oLs-OJ-VnS"/>
                                 <exclude reference="Cf9-Ob-mV3"/>
                                 <exclude reference="LbZ-yq-pXr"/>
                                 <exclude reference="Crr-AM-wbi"/>
                                 <exclude reference="bjt-rd-Xtr"/>
                                 <exclude reference="h8G-e3-9xF"/>
+                                <exclude reference="mmX-Et-wYb"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="u9Y-Sl-80j"/>
+                                <include reference="KW9-Vi-2nY"/>
                                 <include reference="him-ay-Suq"/>
                             </mask>
                             <mask key="constraints">
@@ -394,11 +436,18 @@
                                 <include reference="7Vb-ll-4TM"/>
                                 <include reference="HBu-8x-Llz"/>
                                 <include reference="ZoK-Vk-5US"/>
+                                <include reference="Ewq-fi-juO"/>
+                                <include reference="LOX-3k-wsE"/>
+                                <include reference="QCM-Ef-w6z"/>
+                                <include reference="SNP-cG-Til"/>
+                                <include reference="hmP-xS-Qjh"/>
+                                <include reference="oLs-OJ-VnS"/>
                                 <include reference="Cf9-Ob-mV3"/>
                                 <include reference="LbZ-yq-pXr"/>
                                 <include reference="Crr-AM-wbi"/>
                                 <include reference="bjt-rd-Xtr"/>
                                 <include reference="h8G-e3-9xF"/>
+                                <include reference="mmX-Et-wYb"/>
                             </mask>
                         </variation>
                     </view>
@@ -424,7 +473,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="failMessage" destination="KW9-Vi-2nY" id="jRH-5h-nUf"/>
                         <outlet property="myTableView" destination="u9Y-Sl-80j" id="7Mc-tr-9Yb"/>
+                        <outlet property="successMessage" destination="him-ay-Suq" id="vlS-22-k37"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
