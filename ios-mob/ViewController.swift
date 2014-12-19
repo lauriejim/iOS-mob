@@ -10,14 +10,14 @@ import UIKit
 
 class ViewController: SlackRequestController, UITableViewDataSource, UITableViewDelegate {
     
+    var fail:Bool?
+    var success:Bool?
+    var tokenId = ""
+    var recipeItems: NSMutableArray = NSMutableArray()
+    
     @IBOutlet weak var myTableView: UITableView!
     @IBOutlet weak var successMessage: UIView!
     @IBOutlet weak var failMessage: UIView!
-    
-    var recipeItems: NSMutableArray = NSMutableArray()
-    var tokenId = ""
-    var success:Bool?
-    var fail:Bool?
     
     override func viewDidAppear(animated: Bool) {
         var userDefaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
@@ -56,8 +56,7 @@ class ViewController: SlackRequestController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view, typically from a nib.
-        // self.setUpRecipes()
+        // Do any additional setup after loading the view, typically from a nib
         self.myTableView.delegate = self
         self.myTableView.dataSource = self
     }
@@ -117,8 +116,24 @@ class ViewController: SlackRequestController, UITableViewDataSource, UITableView
     }
     
     // Cell edit button
-    @IBAction func editRecipe(sender: UIButton) {
-        println("Edit")
+    @IBAction func editView(sender: UIButton) {
+        var item: AnyObject = recipeItems.objectAtIndex(sender.tag)
+        var title = item.objectForKey("recipeName") as String
+        var username = item.objectForKey("username") as String
+        var message = item.objectForKey("message") as String
+        var channel = item.objectForKey("channel") as String
+        var botImage = "bot-ico.png"
+        
+        var editViewController: EditViewController = self.storyboard?.instantiateViewControllerWithIdentifier("EditViewController") as EditViewController
+
+        editViewController.token = self.tokenId
+        editViewController.channelsList = self.channels
+        editViewController.message = message
+        editViewController.botname = username
+        editViewController.recipeName = title
+        editViewController.index = sender.tag
+        
+        self.navigationController?.pushViewController(editViewController, animated: true)
     }
     
     // Cell post button
@@ -131,21 +146,6 @@ class ViewController: SlackRequestController, UITableViewDataSource, UITableView
         self.postMessage(channel, message: message, botName: botName)
 
     }
-    
-    // Detail view
-//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        let recipe = arrayOfRecipes[indexPath.row]
-//        
-//        var detailedViewController: DetailViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DetailViewController") as DetailViewController
-//        detailedViewController.titleString = recipe.recipeName
-//        detailedViewController.messageString = recipe.message
-//        detailedViewController.usernameString = recipe.username
-//        detailedViewController.channelString = recipe.channel
-//        detailedViewController.imageString = recipe.imageName
-//        
-//        self.presentViewController(detailedViewController, animated: true, completion: nil)
-//        
-//    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         var addViewController = segue.destinationViewController as AddViewController

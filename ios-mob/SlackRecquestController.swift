@@ -11,8 +11,8 @@ import Alamofire
 
 class SlackRequestController: UIViewController {
     
-    var channels = [String]()
     var token = ""
+    var channels = [String]()
     var req = SlackRequest()
     
     func postMessage(channel:String, message:String, botName:String) {
@@ -77,11 +77,6 @@ class SlackRequestController: UIViewController {
     }
     
     func error(jsonObject:NSDictionary) {
-//        let alert = UIAlertView()
-//        alert.title = "Error"
-//        alert.message = jsonObject["error"] as? String
-//        alert.addButtonWithTitle("Back")
-//        alert.show()
         var viewController: ViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ViewController") as ViewController
         viewController.fail = true
         viewController.tokenId = self.req.params["token"]!
@@ -89,24 +84,10 @@ class SlackRequestController: UIViewController {
     }
     
     func success() {
-//        let alert = UIAlertView()
-//        alert.title = "Success"
-//        alert.message = "Message envoyé!"
-//        alert.addButtonWithTitle("Continuer")
-//        alert.show()
         var viewController: ViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ViewController") as ViewController
         viewController.success = true
         viewController.tokenId = self.req.params["token"]!
         self.navigationController?.pushViewController(viewController, animated: false)
     }
-    
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        var viewController: ViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ViewController") as ViewController
-//        viewController.tokenId = self.token
-//        self.presentViewController(viewController, animated: true, completion: nil)
-//        
-//        var viewController = segue.destinationViewController as ViewController
-//
-//    }
     
 }

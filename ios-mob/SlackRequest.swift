@@ -10,8 +10,8 @@ import UIKit
 
 class SlackRequest: NSObject {
     var token = ""
+    var params:[String: String]!
     let url = "https://slack.com/api/"
-    var params:[String: String]!    
     
     override init() {
         self.params = [

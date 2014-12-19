@@ -16,6 +16,7 @@ class CustomCell: UITableViewCell {
     @IBOutlet weak var botLabel: UILabel!
     @IBOutlet weak var botImageView: UIImageView!
     @IBOutlet weak var postButton: UIButton!
+    @IBOutlet weak var editButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,6 +36,7 @@ class CustomCell: UITableViewCell {
         self.botLabel.text = botLabel
         self.botImageView.image = UIImage(named: botImage)
         self.postButton.tag = index
+        self.editButton.tag = index
     }
     
 }

@@ -24,7 +24,6 @@
 		0A1DE6501A406CC000A1C67F /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1DE6461A406CC000A1C67F /* Lato-Light.ttf */; };
 		0A1DE6511A406CC000A1C67F /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1DE6471A406CC000A1C67F /* Lato-LightItalic.ttf */; };
 		0A1DE6521A406CC000A1C67F /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A1DE6481A406CC000A1C67F /* Lato-Regular.ttf */; };
-		0A1DE6541A40837B00A1C67F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1DE6531A40837B00A1C67F /* DetailViewController.swift */; };
 		0A1DE6561A4099C300A1C67F /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1DE6551A4099C300A1C67F /* AddViewController.swift */; };
 		0A1DE6581A409CD000A1C67F /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1DE6571A409CD000A1C67F /* EditViewController.swift */; };
 		0A3B1B0E1A41C284004B1D42 /* SlackRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3B1B0D1A41C284004B1D42 /* SlackRequest.swift */; };
@@ -106,7 +105,6 @@
 		0A1DE6461A406CC000A1C67F /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
 		0A1DE6471A406CC000A1C67F /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
 		0A1DE6481A406CC000A1C67F /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
-		0A1DE6531A40837B00A1C67F /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		0A1DE6551A4099C300A1C67F /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		0A1DE6571A409CD000A1C67F /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		0A3B1B0D1A41C284004B1D42 /* SlackRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlackRequest.swift; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 				0A1DE5CE1A3F250F00A1C67F /* LaunchScreen.xib */,
 				0A1DE5CF1A3F250F00A1C67F /* Main.storyboard */,
 				0A1DE5D01A3F250F00A1C67F /* ViewController.swift */,
-				0A1DE6531A40837B00A1C67F /* DetailViewController.swift */,
 				0A1DE6551A4099C300A1C67F /* AddViewController.swift */,
 				0A3B1B0D1A41C284004B1D42 /* SlackRequest.swift */,
 				0A1DE6571A409CD000A1C67F /* EditViewController.swift */,
@@ -363,7 +360,6 @@
 				0A1DE5D11A3F250F00A1C67F /* AppDelegate.swift in Sources */,
 				0A1DE63B1A403A9600A1C67F /* CustomCell.swift in Sources */,
 				0A1DE6561A4099C300A1C67F /* AddViewController.swift in Sources */,
-				0A1DE6541A40837B00A1C67F /* DetailViewController.swift in Sources */,
 				0A3B1B0E1A41C284004B1D42 /* SlackRequest.swift in Sources */,
 				0A1DE5D61A3F250F00A1C67F /* ViewController.swift in Sources */,
 				0A3B1B121A41C45C004B1D42 /* SlackRecquestController.swift in Sources */,
@@ -515,6 +511,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "ios-mobTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios-mob.app/ios-mob";
@@ -530,6 +527,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "ios-mobTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios-mob.app/ios-mob";
